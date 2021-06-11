@@ -1,0 +1,19 @@
+{
+  "name": "patchbay",
+  "version": "0.0.0",
+  "description": "random stuff to make stuff easier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergDerbst/tmt-patchbay.git"
+  },
+  "author": "Sergio Weigel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergDerbst/tmt-patchbay/issues"
+  },
+  "homepage": "https://github.com/SergDerbst/tmt-patchbay#readme"
+}
