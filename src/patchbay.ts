@@ -24,14 +24,6 @@ export interface LogicSocket extends Socket {}
 export interface RouteSocket extends Socket {}
 export interface StoreSocket extends Socket {}
 
-export interface SocketFactory {
-	create: (socket?: Socket) => Socket;
-}
-
-export interface SocketProvider<J extends Socket> {
-	(socket?: J): J;
-}
-
 export abstract class Patchbay<
 	A extends AuthSocket,
 	D extends DataSocket,
@@ -53,42 +45,42 @@ export abstract class Patchbay<
 		return this.sockets[name];
 	}
 
-	auth: SocketProvider<A> = (socket?: A): A => {
+	auth = (socket?: A): A => {
 		if (socket) {
 			this.sockets[SocketType.Auth] = socket;
 		}
 		return this.sockets[SocketType.Auth] as A;
 	}
 
-	data: SocketProvider<D> = (socket?: D): D => {
+	data = (socket?: D): D => {
 		if (socket) {
 			this.sockets[SocketType.Data] = socket;
 		}
 		return this.sockets[SocketType.Data] as D;
 	}
 
-	error: SocketProvider<E> = (socket?:E): E => {
+	error = (socket?:E): E => {
 		if (socket) {
 			this.sockets[SocketType.Error] = socket;
 		}
 		return this.sockets[SocketType.Error] as E;
 	}
 
-	logic: SocketProvider<L> = (socket?: L): L => {
+	logic = (socket?: L): L => {
 		if (socket) {
 			this.sockets[SocketType.Logic] = socket;
 		}
 		return this.sockets[SocketType.Logic] as L;
 	}
 
-	route: SocketProvider<R> = (socket?: R): R => {
+	route = (socket?: R): R => {
 		if (socket) {
 			this.sockets[SocketType.Router] = socket;
 		}
 		return this.sockets[SocketType.Router] as R;
 	}
 
-	store: SocketProvider<S> = (socket?: S): S => {
+	store = (socket?: S): S => {
 		if (socket) {
 			this.sockets[SocketType.Store] = socket;
 		}

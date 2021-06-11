@@ -3,8 +3,6 @@ import {
   PatchCord,
   SocketType,
   Socket,
-  SocketFactory,
-  SocketProvider,
   AuthSocket,
   DataSocket,
   ErrorSocket,
@@ -12,14 +10,11 @@ import {
   RouteSocket,
   StoreSocket
 } from "./patchbay";
-
 export {
   Patchbay,
   PatchCord,
   SocketType,
   Socket,
-  SocketFactory,
-  SocketProvider,
   AuthSocket,
   DataSocket,
   ErrorSocket,
