@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/SergDerbst/tmt-patchbay#readme",
   "dependencies": {
+    "n": "^7.3.0",
     "rxjs": "^7.1.0"
   }
 }
