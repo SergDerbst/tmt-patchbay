@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SergDerbst/tmt-patchbay/issues"
   },
-  "homepage": "https://github.com/SergDerbst/tmt-patchbay#readme"
+  "homepage": "https://github.com/SergDerbst/tmt-patchbay#readme",
+  "dependencies": {
+    "rxjs": "^7.1.0"
+  }
 }
